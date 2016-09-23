@@ -1,7 +1,7 @@
-FROM 1and1internet/ubuntu-16
-RUN apt update && \
-    apt install ruby -y && \
-    gem install sinatra
+FROM alpine:latest
+RUN apk update && \
+    apk add ruby && \
+    gem install sinatra --no-ri --no-rdoc
 
 COPY . /var/www/
 WORKDIR /var/www/
