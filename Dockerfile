@@ -6,4 +6,6 @@ RUN apk update && \
 COPY . /var/www/
 WORKDIR /var/www/
 
+EXPOSE 3000
+
 ENTRYPOINT ["ruby", "bin/app.rb"]
